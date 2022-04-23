@@ -12,7 +12,8 @@ test: image
 shell: image
 	docker run --rm -it \
 		--volume ${CWD}:/gtsam-python-project:ro \
-		${IMAGE_TAG} bash
+		${IMAGE_TAG} \
+			bash
 
 image:
 	make -C gtsam-image/ image
