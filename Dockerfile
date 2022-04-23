@@ -10,6 +10,6 @@ WORKDIR /tmp/gtsam-python-project
 RUN mkdir build && cd build \
         && cmake .. && make -j && make python-install
 
-# https://github.com/borglab/gtsam/issues/380
+# https://github.com/borglab/gtsam/issues/380#issuecomment-1053260888
 RUN cp /usr/local/lib/libmetis-gtsam.so /usr/lib
 
