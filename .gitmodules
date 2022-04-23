@@ -1,0 +1,3 @@
+[submodule "gtsam-image"]
+	path = gtsam-image
+	url = https://github.com/pvphan/gtsam-image
