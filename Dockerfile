@@ -1,6 +1,10 @@
 FROM pvphan/gtsam-image:4.1.1
 
-COPY . /tmp/gtsam-python-project
+COPY cpp /tmp/gtsam-python-project/cpp
+COPY python /tmp/gtsam-python-project/python
+COPY wrapper /tmp/gtsam-python-project/wrapper
+COPY CMakeLists.txt gtsam_example.i README.md /tmp/gtsam-python-project/
+
 WORKDIR /tmp/gtsam-python-project
 
 RUN mkdir build && cd build \
