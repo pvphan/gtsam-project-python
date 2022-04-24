@@ -6,10 +6,10 @@ COPY wrapper /tmp/gtsam-python-project/wrapper
 COPY CMakeLists.txt gtsam_example.i README.md /tmp/gtsam-python-project/
 
 WORKDIR /tmp/gtsam-python-project
-
-RUN mkdir build && cd build \
-        && cmake .. && make -j && make python-install
-
 # https://github.com/borglab/gtsam/issues/380#issuecomment-1053260888
-RUN cp /usr/local/lib/libmetis-gtsam.so /usr/lib
+RUN mkdir build && cd build \
+        && cmake .. && make -j install && make python-install \
+        && cp /usr/local/lib/libmetis-gtsam.so /usr/lib \
+        && rm -rf /tmp/gtsam-python-project
 
+WORKDIR /gtsam-python-project
