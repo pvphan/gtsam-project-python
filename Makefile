@@ -16,6 +16,6 @@ shell: image
 			bash
 
 image:
-	make -C gtsam-image/ image
+	make -C ./gtsam-image/ image
 	docker build --tag ${IMAGE_TAG} .
 
